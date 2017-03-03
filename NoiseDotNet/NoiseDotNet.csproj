@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B1B0E231-1E56-4DDF-A596-78F2E7CB8D5D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Noise</RootNamespace>
+    <AssemblyName>NoiseDotNet</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="IModule.cs" />
+    <Compile Include="Math.cs" />
+    <Compile Include="Noise.cs" />
+    <Compile Include="Model\CylinderModel.cs" />
+    <Compile Include="Model\LineModel.cs" />
+    <Compile Include="Model\PlaneModel.cs" />
+    <Compile Include="Model\SphereModel.cs" />
+    <Compile Include="Module\AbsModule.cs" />
+    <Compile Include="Module\AddModule.cs" />
+    <Compile Include="Module\BillowModule.cs" />
+    <Compile Include="Module\BlendModule.cs" />
+    <Compile Include="Module\CheckerModule.cs" />
+    <Compile Include="Module\ClampModule.cs" />
+    <Compile Include="Module\ConstantModule.cs" />
+    <Compile Include="Module\CubicSplineModule.cs" />
+    <Compile Include="Module\CylindersModule.cs" />
+    <Compile Include="Module\DisplaceModule.cs" />
+    <Compile Include="Module\ExponentModule.cs" />
+    <Compile Include="Module\GradientSelectModule.cs" />
+    <Compile Include="Module\InvertModule.cs" />
+    <Compile Include="Module\MaximumModule.cs" />
+    <Compile Include="Module\MinimumModule.cs" />
+    <Compile Include="Module\MultiplyModule.cs" />
+    <Compile Include="Module\PerlinModule.cs" />
+    <Compile Include="Module\PowerModule.cs" />
+    <Compile Include="Module\RidgedMultiModule.cs" />
+    <Compile Include="Module\RotationModule.cs" />
+    <Compile Include="Module\ScaleBiasModule.cs" />
+    <Compile Include="Module\ScalePointModule.cs" />
+    <Compile Include="Module\SphereModule.cs" />
+    <Compile Include="Module\TerraceModule.cs" />
+    <Compile Include="Module\TranslateModule.cs" />
+    <Compile Include="Module\TurbulanceModule.cs" />
+    <Compile Include="Module\VoronoiModule.cs" />
+    <Compile Include="Utility\Colours.cs" />
+    <Compile Include="Utility\NoiseMapBuilder.cs" />
+    <Compile Include="Utility\NoiseMap.cs" />
+    <Compile Include="Utility\Renderer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Utility\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>
